@@ -266,7 +266,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">869</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">854</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -395,27 +395,28 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="制作一个简单的c语言词法分析器"><a href="#制作一个简单的c语言词法分析器" class="headerlink" title="制作一个简单的c语言词法分析器"></a>制作一个简单的c语言词法分析器</h2><h4 id="词法分析的定义："><a href="#词法分析的定义：" class="headerlink" title="词法分析的定义："></a>词法分析的定义：</h4><p>词法分析是编译程序进行编译时第一个要进行的任务，主要是对源程序进行编译预处理（去除注释、无用的回车换行找到包含的文件等）之后，对整个源程序进行分解，分解成一个个单词，这些单词有且只有五类，分别是标识符、保留字、常数、运算符、界符。以便为下面的语法分析和语义分析做准备。可以说词法分析面向的对象是单个的字符，目的是把它们组成有效的单词（字符串）；而语法的分析则是利用词法分析的结果作为输入来分析是否符合语法规则并且进行语法制导下的语义分析，最后产生四元组(中间代码)，进行优化（可有可无）之后最终生成目标代码。</p>
-<h4 id="定义词法分析的标识符、保留字和符号等等"><a href="#定义词法分析的标识符、保留字和符号等等" class="headerlink" title="定义词法分析的标识符、保留字和符号等等"></a>定义词法分析的标识符、保留字和符号等等</h4><ol>
+        <h2 id="词法分析的定义："><a href="#词法分析的定义：" class="headerlink" title="词法分析的定义："></a>词法分析的定义：</h2><p>词法分析是编译程序进行编译时第一个要进行的任务，主要是对源程序进行编译预处理（去除注释、无用的回车换行找到包含的文件等）之后，对整个源程序进行分解，分解成一个个单词，这些单词有且只有五类，分别是标识符、保留字、常数、运算符、界符。以便为下面的语法分析和语义分析做准备。可以说词法分析面向的对象是单个的字符，目的是把它们组成有效的单词（字符串）；而语法的分析则是利用词法分析的结果作为输入来分析是否符合语法规则并且进行语法制导下的语义分析，最后产生四元组(中间代码)，进行优化（可有可无）之后最终生成目标代码。</p>
+<h2 id="定义词法分析的标识符、保留字和符号等等"><a href="#定义词法分析的标识符、保留字和符号等等" class="headerlink" title="定义词法分析的标识符、保留字和符号等等"></a>定义词法分析的标识符、保留字和符号等等</h2><ul>
 <li>第一类：标识符   letter(letter | digit)*  无穷集</li>
 <li>第二类：常数    (digit)+  无穷集</li>
 <li>第三类：保留字(32)<br>auto       break    case     char        const      continue<br>default    do       double   else        enum       extern<br>float      for      goto     if          int        long<br>register   return   short    signed      sizeof     static<br>struct     switch   typedef  union       unsigned   void<br>volatile    while</li>
 <li>第四类：界符  ‘/*’、‘//’、 () { } [ ] “ “  ‘ 等</li>
-<li>第五类：运算符 &lt;、&lt;=、&gt;、&gt;=、=、+、-、*、/、^、等<h4 id="程序的流程"><a href="#程序的流程" class="headerlink" title="程序的流程"></a>程序的流程</h4></li>
+<li>第五类：运算符 &lt;、&lt;=、&gt;、&gt;=、=、+、-、*、/、^、等<h2 id="程序的流程"><a href="#程序的流程" class="headerlink" title="程序的流程"></a>程序的流程</h2></li>
 <li>词法分析程序打开源文件，读取文件内容，直至遇上’$’文件结束符，然后读取结束。</li>
 <li>对读取的文件进行预处理，从头到尾进行扫描，去除//和/<em>  </em>/的内容，以及一些无用的、影响程序执行的符号如换行符、回车符、制表符等。但是千万注意不要在这个时候去除空格，因为空格在词法分析中有用，比如说int i=3;这个语句，如果去除空格就变成了“inti=3”,这样就失去了程序的本意，因此不能在这个时候去除空格。</li>
 <li>选下面就要对源文件从头到尾进行扫描了，从头开始扫描，这个时候扫描程序首先要询问当前的字符是不是空格，若是空格，则继续扫描下一个字符，直至不是空格，然后询问这个字符是不是字母，若是则进行标识符和保留字的识别；若这个字符为数字，则进行数字的判断。否则，依次对这个字符可能的情况进行判断，若是将所有可能都走了一遍还是没有知道它是谁，则认定为错误符号，输出该错误符号，然后结束。每次成功识别了一个单词后，单词都会存在token[ ]中。然后确定这个单词的种别码，最后进行下一个单词的识别。这就是扫描程序进行的工作，可以说这个程序彻底实现了确定有限自动机的某些功能，比如说识别标识符，识别数字等。为了简单起见，这里的数字只是整数。</li>
 <li>主控程序主要负责对每次识别的种别码syn进行判断，对于不同的单词种别做出不同的反应，如对于标识符则将其插入标识符表中。对于保留字则输出该保留字的种别码和助记符，等等吧。直至遇到syn=0;程序结束。</li>
-</ol>
+</ul>
+<p><img src="\\images\pasted-0.png\" alt="upload successful"></p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="http://yoursite.com">nikedown</a>
-            </p><p>原文链接：<a href="http://yoursite.com/2019/03/31/hello-world/">http://yoursite.com/2019/03/31/hello-world/</a>
-            </p><p>发表日期：<a href="http://yoursite.com/2019/03/31/hello-world/">March 31st 2019, 8:40:00 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/03/31/hello-world/">March 31st 2019, 9:58:42 pm</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/03/31/词法分析器/">http://yoursite.com/2019/03/31/词法分析器/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/03/31/词法分析器/">March 31st 2019, 10:23:44 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/03/31/词法分析器/">March 31st 2019, 10:23:48 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -535,7 +536,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#制作一个简单的c语言词法分析器"><span class="toc-number">1.</span> <span class="toc-text">制作一个简单的c语言词法分析器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#词法分析的定义："><span class="toc-number">1.0.1.</span> <span class="toc-text">词法分析的定义：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#定义词法分析的标识符、保留字和符号等等"><span class="toc-number">1.0.2.</span> <span class="toc-text">定义词法分析的标识符、保留字和符号等等</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#程序的流程"><span class="toc-number">1.0.3.</span> <span class="toc-text">程序的流程</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#词法分析的定义："><span class="toc-number">1.</span> <span class="toc-text">词法分析的定义：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#定义词法分析的标识符、保留字和符号等等"><span class="toc-number">2.</span> <span class="toc-text">定义词法分析的标识符、保留字和符号等等</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#程序的流程"><span class="toc-number">3.</span> <span class="toc-text">程序的流程</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -577,7 +578,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/31</span><a class="archive-post-title" href="/2019/03/31/hello-world/">词法分析器</a>
+            <span class="archive-post-date">03/31</span><a class="archive-post-title" href="/2019/03/31/词法分析器/">词法分析器</a>
         </li>
     
     </ul></div>
