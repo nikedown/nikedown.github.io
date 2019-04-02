@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-02T09:20:51.984Z</updated>
+  <updated>2019-04-02T14:23:11.638Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Blender学习入门</title>
+    <link href="http://yoursite.com/2019/04/02/Blender%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/"/>
+    <id>http://yoursite.com/2019/04/02/Blender学习入门/</id>
+    <published>2019-04-02T11:13:07.000Z</published>
+    <updated>2019-04-02T14:23:11.638Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Blender界面"><a href="#Blender界面" class="headerlink" title="Blender界面"></a>Blender界面</h3><p>想要了解学习Blender的话，首先要先了解Blender的界面以及一些基本的操作，下面是带有中文字幕关于Blender 2.80界面的视频教程。<br><a href="https://www.bilibili.com/video/av36550581/?p=1" target="_blank" rel="noopener">Blender入门教程之界面介绍</a></p><h3 id="视图基本操作"><a href="#视图基本操作" class="headerlink" title="视图基本操作"></a>视图基本操作</h3><ul><li>最大化视图：鼠标放在视图窗口，按住Ctrl+空格</li><li>旋转摄像机镜头：按住鼠标中键</li><li>移动摄像机镜头：按住Shift+鼠标中键</li><li>缩放视图：按住Ctrl+鼠标中键+鼠标滚轮</li><li>手动控制虚拟对象：Shift+B 然后拖动出一个区域</li><li>移动对象：鼠标左键选中对象，按下G键就可以移动目标了</li><li>正视图：数字键盘1；右视图：数字键盘3；顶视图：数字键盘7；每个视图对应的反视图都是Ctrl+对应正视图的快捷键（注意：数字键盘是右侧的小键盘，字母上的数字键对应的是其他的功能）</li><li>切换透视视图和正交视图：数字键盘5<br>视频入口：<a href="https://www.bilibili.com/video/av36550581/?p=2" target="_blank" rel="noopener">Blender视图基本操作</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Blender界面&quot;&gt;&lt;a href=&quot;#Blender界面&quot; class=&quot;headerlink&quot; title=&quot;Blender界面&quot;&gt;&lt;/a&gt;Blender界面&lt;/h3&gt;&lt;p&gt;想要了解学习Blender的话，首先要先了解Blender的界面以及一些基本的操作，
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Blender学习之准备工作</title>
     <link href="http://yoursite.com/2019/04/02/Blender%E5%AD%A6%E4%B9%A0/"/>
     <id>http://yoursite.com/2019/04/02/Blender学习/</id>
     <published>2019-04-02T08:24:00.000Z</published>
-    <updated>2019-04-02T09:20:51.984Z</updated>
+    <updated>2019-04-02T11:07:59.644Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="什么是Blender"><a href="#什么是Blender" class="headerlink" title="什么是Blender"></a>什么是Blender</h3><p>Blender是一个免费开源的3D创作套件。<br>Blender可以创作多种3D视觉内容，比如静态图像、3D动画、视效镜头，以及视频编辑。<br>Blender 非常适合于独立开发者以及中小型工作室，它高度统一的工作流以及非常可靠的开发过程可以让所有人从中受益。<br>Blender是一款跨平台的应用工具，可以在Linux、macOS以及MS-Windows系统下运行。与其他3D建模工具相比，Blender对内存和驱动的需求更低。其界面使用OpenGL，在所有支持的硬件与平台都能提供相当稳定的用户体验。</p><h3 id="Blender主要功能"><a href="#Blender主要功能" class="headerlink" title="Blender主要功能"></a>Blender主要功能</h3><ul><li>Blender是一套完整集成了3D内容创作的套件，全面提供了必要的创作工具包括 建模, 渲染, 动画, 视频编辑, VFX, 合成, 制作贴图, 骨骼蒙皮, 以及许多类型的 模拟。</li><li>跨平台，使用了OpenGL的GUI可以在所有主流平台上都表现出一致的显示效果（并且可通过Python脚本来自定义界面）。</li><li>高质量的3D架构，带来了快速且高效的工作流。</li><li>来自 论坛 和 IRCS 出色的社区支持。</li><li><p>体积小巧，便于分发。  </p><p>更多详情可以去Blender中国社区查看，该网站为Blender中国的官方网站，网站中也有很多现成的资料和项目可供直接下载。<br><a href="https://www.blendercn.org/" target="_blank" rel="noopener">Blender中国社区</a></p></li></ul><h3 id="Blender下载及安装"><a href="#Blender下载及安装" class="headerlink" title="Blender下载及安装"></a>Blender下载及安装</h3><p>本人使用的是Blender 2.80 Beta版，目前只发布了测试版，与2.79版的改动较大，并且虽是测试版，但功能已经十分完善。Blender的安装过程十分简单，和正常软件的安装过程一样，下面是Blender2.80 Beta的链接。<br><a href="https://builder.blender.org/download/" target="_blank" rel="noopener">Blender2.80 Beta</a><br>安装成功后：<br><img src="http://ww1.sinaimg.cn/large/006xsPrWgy1g1oe33q9s5j31g30sm1kx.jpg" alt></p><h3 id="Blender设置中文"><a href="#Blender设置中文" class="headerlink" title="Blender设置中文"></a>Blender设置中文</h3><p>Blender是自带中文的，但中文的覆盖率不完全，有很多界面都还是英文的，以下是中文设置的方法</p><ul><li>点击菜单中的Edit，选择最下面的Preferences<br><img src="http://ww1.sinaimg.cn/large/006xsPrWgy1g1oe9bja5wj31g50s71kr.jpg" alt>  </li><li>选择Interface中的language就可以设置中文（注意：选择语言界面是不够大的显示不完全所有可选语言，进去找不到中文将鼠标放置在如图位置就可以找到中文了）<br><img src="http://ww1.sinaimg.cn/large/006xsPrWgy1g1oehbzndnj30mz0j5405.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006xsPrWgy1g1oeks3hc6j30tn0jamz5.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006xsPrWgy1g1oelagrvfj30tn0ja40l.jpg" alt></li><li>最后点击保存设置进行了（中文设置下面有三个多选按钮可选分别是—Tooltips:工作提示，New Date:工作提示，Interface:界面，想要哪个显示中文勾选上相应的项就行了）<br><img src="http://ww1.sinaimg.cn/large/006xsPrWgy1g1oem18p42j30mz0j5myo.jpg" alt></li><li>全勾选后的界面就是中文界面了<br><img src="http://ww1.sinaimg.cn/large/006xsPrWgy1g1oesm6sf8j31g10r81k5.jpg" alt></li></ul>]]></content>
+    <content type="html"><![CDATA[<h3 id="什么是Blender"><a href="#什么是Blender" class="headerlink" title="什么是Blender"></a>什么是Blender</h3><p>Blender是一个免费开源的3D创作套件。<br>Blender可以创作多种3D视觉内容，比如静态图像、3D动画、视效镜头，以及视频编辑。<br>Blender 非常适合于独立开发者以及中小型工作室，它高度统一的工作流以及非常可靠的开发过程可以让所有人从中受益。<br>Blender是一款跨平台的应用工具，可以在Linux、macOS以及MS-Windows系统下运行。与其他3D建模工具相比，Blender对内存和驱动的需求更低。其界面使用OpenGL，在所有支持的硬件与平台都能提供相当稳定的用户体验。</p><h3 id="Blender主要功能"><a href="#Blender主要功能" class="headerlink" title="Blender主要功能"></a>Blender主要功能</h3><ul><li>Blender是一套完整集成了3D内容创作的套件，全面提供了必要的创作工具包括 建模, 渲染, 动画, 视频编辑, VFX, 合成, 制作贴图, 骨骼蒙皮, 以及许多类型的 模拟。</li><li>跨平台，使用了OpenGL的GUI可以在所有主流平台上都表现出一致的显示效果（并且可通过Python脚本来自定义界面）。</li><li>高质量的3D架构，带来了快速且高效的工作流</li><li>来自 论坛 和 IRCS 出色的社区支持</li><li>体积小巧，便于分发。<br>更多详情可以去Blender中国社区查看，该网站为Blender中国的官方网站，网站中也有很多现成的资料和项目可供直接下载。<br><a href="https://www.blendercn.org/" target="_blank" rel="noopener">Blender中国社区</a></li></ul><h3 id="Blender下载及安装"><a href="#Blender下载及安装" class="headerlink" title="Blender下载及安装"></a>Blender下载及安装</h3><p>本人使用的是Blender 2.80 Beta版，目前只发布了测试版，与2.79版的改动较大，并且虽是测试版，但功能已经十分完善。Blender的安装过程十分简单，和正常软件的安装过程一样，下面是Blender2.80 Beta的链接。<br><a href="https://builder.blender.org/download/" target="_blank" rel="noopener">Blender2.80 Beta</a><br>安装成功后：<br><img src="http://ww1.sinaimg.cn/large/006xsPrWgy1g1oe33q9s5j31g30sm1kx.jpg" alt></p><h3 id="Blender设置中文"><a href="#Blender设置中文" class="headerlink" title="Blender设置中文"></a>Blender设置中文</h3><p>Blender是自带中文的，但中文的覆盖率不完全，有很多界面都还是英文的，以下是中文设置的方法</p><ul><li>点击菜单中的Edit，选择最下面的Preferences<br><img src="http://ww1.sinaimg.cn/large/006xsPrWgy1g1oe9bja5wj31g50s71kr.jpg" alt>  </li><li>选择Interface中的language就可以设置中文（注意：选择语言界面是不够大的显示不完全所有可选语言，进去找不到中文将鼠标放置在如图位置就可以找到中文了）<br><img src="http://ww1.sinaimg.cn/large/006xsPrWgy1g1oehbzndnj30mz0j5405.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006xsPrWgy1g1oeks3hc6j30tn0jamz5.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006xsPrWgy1g1oelagrvfj30tn0ja40l.jpg" alt></li><li>最后点击保存设置进行了（中文设置下面有三个多选按钮可选分别是—Tooltips:工作提示，New Date:新建项目，Interface:界面，想要哪个显示中文勾选上相应的项就行了）<br><img src="http://ww1.sinaimg.cn/large/006xsPrWgy1g1oem18p42j30mz0j5myo.jpg" alt></li><li>全勾选后的界面就是中文界面了<br><img src="http://ww1.sinaimg.cn/large/006xsPrWgy1g1oesm6sf8j31g10r81k5.jpg" alt></li></ul>]]></content>
     
     <summary type="html">
     
