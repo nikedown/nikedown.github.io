@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-03T13:45:34.907Z</updated>
+  <updated>2019-04-04T10:20:08.205Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阿里云服务器入门操作</title>
+    <link href="http://yoursite.com/2019/04/04/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2019/04/04/阿里云服务器入门操作/</id>
+    <published>2019-04-04T09:40:52.000Z</published>
+    <updated>2019-04-04T10:20:08.205Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="进入服务器控制台"><a href="#进入服务器控制台" class="headerlink" title="进入服务器控制台"></a>进入服务器控制台</h3><p><a href="https://ecs.console.aliyun.com/" target="_blank" rel="noopener">阿里云控制台网址</a>  </p><ul><li>进入后选择云服务器ECS：<br><img src="http://ww1.sinaimg.cn/large/006xsPrWly1g1qqt4au2kj319k0oijtt.jpg" alt>  </li><li>之后选择云服务器就可以管理服务器<br><img src="http://ww1.sinaimg.cn/large/006xsPrWly1g1qquxxxitj31ca0oldjn.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006xsPrWly1g1qqxnw1toj31ce0kiacd.jpg" alt></li></ul><h3 id="重置服务器密码"><a href="#重置服务器密码" class="headerlink" title="重置服务器密码"></a>重置服务器密码</h3><ul><li>选中服务器实例后点击重置密码<br><img src="http://ww1.sinaimg.cn/large/006xsPrWly1g1qr1vegf7j31e30iswgy.jpg" alt></li><li>按照要求输入密码后提交即可<br><img src="http://ww1.sinaimg.cn/large/006xsPrWly1g1qr2z0p7fj30kt0e3wf0.jpg" alt></li><li>最后重启服务器（服务器密码重启后才会起效）<br><img src="http://ww1.sinaimg.cn/large/006xsPrWly1g1qr3uwo4ij31cd0l3wgw.jpg" alt></li></ul><h3 id="使用Xshell进行远程连接"><a href="#使用Xshell进行远程连接" class="headerlink" title="使用Xshell进行远程连接"></a>使用Xshell进行远程连接</h3><p><a href="https://www.netsarang.com/zh/free-for-home-school/" target="_blank" rel="noopener">Xshell下载地址（需要填写姓名、邮箱）</a></p><ul><li>下载好后打开Xshell会自动弹出新建会话，没有的话自己点击新建会话<br><img src="http://ww1.sinaimg.cn/large/006xsPrWly1g1qrbtagvej30rc0l9t9w.jpg" alt></li><li>填写主机号，主机号为公网IP，在阿里云控制台中可以看到，之后点击连接<br><img src="http://ww1.sinaimg.cn/large/006xsPrWly1g1qrco6cz4j30nt0m4dgw.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006xsPrWly1g1qrejmndgj31cc0nbdia.jpg" alt></li><li>填写用户名（未添加之前只有一个用户root）<br><img src="http://ww1.sinaimg.cn/large/006xsPrWly1g1qrfbj7zaj30e7083q32.jpg" alt></li><li>填写服务器密码<br><img src="http://ww1.sinaimg.cn/large/006xsPrWly1g1qrive9huj30i40gozlk.jpg" alt></li><li>正常情况下就连接成功了<br><img src="http://ww1.sinaimg.cn/large/006xsPrWly1g1qrjtkbpdj30rc0l9jtc.jpg" alt></li><li>不过可能会出现一个警告<br><img src="http://ww1.sinaimg.cn/large/006xsPrWly1g1qrkdu8bsj30rc0l9dge.jpg" alt><br>想要消除警告需要更改一个设置<br>右键自己创建的会话进入属性设置，将隧道的X11转移的勾选按钮勾掉<br><img src="http://ww1.sinaimg.cn/large/006xsPrWly1g1qrojclrbj30nt0m4t9v.jpg" alt><br>之后就不会出现该警告了</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;进入服务器控制台&quot;&gt;&lt;a href=&quot;#进入服务器控制台&quot; class=&quot;headerlink&quot; title=&quot;进入服务器控制台&quot;&gt;&lt;/a&gt;进入服务器控制台&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://ecs.console.aliyun.com/&quot; targ
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Blender学习入门</title>
