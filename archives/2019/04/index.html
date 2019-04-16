@@ -346,6 +346,44 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/04/16/CentOS搭建git服务器/">
+            
+                <span>CentOS搭建git服务器</span>
+        </a>
+        <div class="abstract-content">
+            安装git
+通过yum安装git
+1yum install git
+
+查看git是否安装成功
+1git --version
+
+
+安装成功的会返回git版本信息
+添加git的管理用户
+新建git用户和设置密码
+1234adduser git#adduser后的git是用户的名字，为了以后配置方便最好设为gitpasswd git#执行命令后会提示输入密码，输入两次后就行了
+
+进入服务器home目录下通过ll命令查看是否存在名为git的文件夹，存在的话说明
+配置服务器的SSH访问
+切换到git账号,并创建ssh的默认目录和校验公钥的配置文件1234567891011su git#切换到git...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/16</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/04/04/Nginx安装部署/">
             
                 <span>Nginx安装部署</span>
@@ -601,9 +639,20 @@ Blender是一套完整集成了3D内容创作的套件，全面提供了必...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 5
+        Total : 6
         </div>
         <!-- search  -->
         
@@ -616,6 +665,11 @@ Blender是一套完整集成了3D内容创作的套件，全面提供了必...
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/16</span><a class="archive-post-title" href="/2019/04/16/CentOS搭建git服务器/">CentOS搭建git服务器</a>
+        </li>
     
     
         <li class="archive-post-item">
