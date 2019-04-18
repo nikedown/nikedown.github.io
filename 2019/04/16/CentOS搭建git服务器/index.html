@@ -430,7 +430,9 @@ height:50vh;
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">adduser git</span><br><span class="line">#adduser后的git是用户的名字，为了以后配置方便最好设为git</span><br><span class="line">passwd git</span><br><span class="line">#执行命令后会提示输入密码，输入两次后就行了</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>进入服务器home目录下通过ll命令查看是否存在名为git的文件夹，存在的话说明<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g24ev7acqcj30hp02qweg.jpg" alt></p>
-<h3 id="配置服务器的SSH访问"><a href="#配置服务器的SSH访问" class="headerlink" title="配置服务器的SSH访问"></a>配置服务器的SSH访问</h3></li>
+</li>
+</ul>
+<h3 id="配置服务器的SSH访问"><a href="#配置服务器的SSH访问" class="headerlink" title="配置服务器的SSH访问"></a>配置服务器的SSH访问</h3><ul>
 <li>切换到git账号,并创建ssh的默认目录和校验公钥的配置文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">su git</span><br><span class="line">#切换到git用户，最好要切换，不然后面会出现问题</span><br><span class="line">cd /home/git</span><br><span class="line">mkdir .ssh</span><br><span class="line">#创建.shh的配置文件，如果存在该文件夹就不用创建</span><br><span class="line">cd /home/git/.ssh</span><br><span class="line">touch authorized_keys</span><br><span class="line">#进入刚创建的.ssh目录并创建authorized_keys文件,此文件存放客户端远程访问的 ssh的公钥</span><br><span class="line">chmod 700 /home/git/.ssh/</span><br><span class="line">chmod 600 /home/git/.ssh/authorized_keys</span><br><span class="line">#设置权限，此步骤不能省略，而且权限值也不要改，不然会报错</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -463,7 +465,7 @@ height:50vh;
         <div class="license-wrapper">
             <p>原文作者：<a href="http://yoursite.com">nikedown</a>
             </p><p>发表日期：<a href="http://yoursite.com/2019/04/16/CentOS搭建git服务器/">April 16th 2019, 1:06:32 pm</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/04/16/CentOS搭建git服务器/">April 16th 2019, 11:11:49 pm</a>          
+            </p><p>更新日期：<a href="http://yoursite.com/2019/04/16/CentOS搭建git服务器/">April 18th 2019, 5:39:03 pm</a>          
         </p></div>
     
     <!-- paginator  -->
