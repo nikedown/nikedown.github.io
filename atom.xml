@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-19T08:32:24.793Z</updated>
+  <updated>2019-04-19T14:51:40.030Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Blender学习：渲染参数与结果</title>
+    <link href="http://yoursite.com/2019/04/19/Blender%E5%AD%A6%E4%B9%A0%EF%BC%9A%E6%B8%B2%E6%9F%93%E5%8F%82%E6%95%B0%E4%B8%8E%E7%BB%93%E6%9E%9C/"/>
+    <id>http://yoursite.com/2019/04/19/Blender学习：渲染参数与结果/</id>
+    <published>2019-04-19T11:33:21.000Z</published>
+    <updated>2019-04-19T14:51:40.030Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="本节主要通过茶壶的进一步渲染来了解渲染引擎Cycles的属性"><a href="#本节主要通过茶壶的进一步渲染来了解渲染引擎Cycles的属性" class="headerlink" title="本节主要通过茶壶的进一步渲染来了解渲染引擎Cycles的属性"></a>本节主要通过茶壶的进一步渲染来了解渲染引擎Cycles的属性</h2><h4 id="渲染属性"><a href="#渲染属性" class="headerlink" title="渲染属性"></a>渲染属性</h4><ul><li>确保渲染引擎还是Cycles</li><li>在“输出”设置面我们可以调节分辨率（跟视频中不一样，输出从渲染界面独立出来了），也可以设置文件存储路径<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g28brlt3t8j31hc0sm1kx.jpg" alt></li><li>采样：1.路径追踪渲染简单场景时要快一点。2.分路路径追踪在处理复杂场景时会快很多</li><li>选择路径追踪（其中的渲染属性就是从摄像机发射到每个像素的光线数量，视图属性用于视图中的场景渲染，属性值为32的话代表每一个像素会被32束光线所追踪）</li><li>切换到摄像机视角，放大后按Ctrl+B来渲染特定区域（为了减少渲染时间）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g28brx6fouj31hc0sm1fs.jpg" alt></li><li>可以看到图像中有很多噪点，这是因为每像素32束光线不足以产生高质量的图像（为了将噪点减少50%，将光线数量翻倍，这样渲染时间也将翻倍，根据自己的电脑配置设置数值，好的话可以设置到1024，我的设置到512就不行了）</li><li>之后将渲染属性调为你视图能到的最大的值，将视图调回32（这是提高渲染质量的一个方法）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g28bs9ecgaj31hc0smqpb.jpg" alt></li><li>光程：可以设置最大反弹次数中的数值去追踪每束光线的路径（将其设置为0就看得到明显的差别了）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g28bstre0aj31hc0sm1kx.jpg" alt></li><li>对于本场景，将最大反弹次数设置为2就行了（跳跃的光线越多，效果也就越慢）</li><li>性能：拼贴属性中的值来提高最终渲染的速度（每张显卡的参数不一样，太大渲染速度会慢太小也会慢，因此通过不断调整来找到最适合的参数）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g28bt466rej31hc0sm4qp.jpg" alt><h4 id="摄像机属性"><a href="#摄像机属性" class="headerlink" title="摄像机属性"></a>摄像机属性</h4></li><li>选中摄像机出现摄像机选项<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g28btgq4qjj31hc0sm1kx.jpg" alt></li><li>镜头-类型：透视类型类似现实生活中的摄像机；正交类型会丢失所有景深细节，类似于正交视图；全景类型在特殊情况下使用，具体效果可以自己变换观察</li><li>调回透视类型，可以使用焦距来表现出景深感，调节起始点和结束来设置渲染的范围<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g28btpspdkj31hc0smkf4.jpg" alt></li><li>摄像机-尺寸：调节后为了显示景深的细节，焦距也要改变，一般和现实中一样设为36或34mm</li><li>景深：决定多远的物体会显示得有多清晰</li><li>景深-光圈半径：决定多远半径内的物体清晰，超过会变模糊</li><li>可以通过Focus Object来选择焦点物体，将焦点物体改为圆柱体</li><li>选中图中模式，将焦点移到茶壶表面<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g28btwyczbj31hc0smkga.jpg" alt></li><li>Shift+A添加空白物体中的纯轴</li><li>将焦点物体设为该轴，调节适当的光圈半径</li><li>最后添加一个猴头来显示景深<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g28budobl5j31hc0u0x6p.jpg" alt><br><a href="https://www.bilibili.com/video/av36550581/?p=6" target="_blank" rel="noopener">Blender学习：改进渲染参数</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;本节主要通过茶壶的进一步渲染来了解渲染引擎Cycles的属性&quot;&gt;&lt;a href=&quot;#本节主要通过茶壶的进一步渲染来了解渲染引擎Cycles的属性&quot; class=&quot;headerlink&quot; title=&quot;本节主要通过茶壶的进一步渲染来了解渲染引擎Cycles的属性&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="Blender" scheme="http://yoursite.com/categories/Blender/"/>
+    
+    
+      <category term="Blender学习" scheme="http://yoursite.com/tags/Blender%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="渲染参数改进" scheme="http://yoursite.com/tags/%E6%B8%B2%E6%9F%93%E5%8F%82%E6%95%B0%E6%94%B9%E8%BF%9B/"/>
+    
+  </entry>
   
   <entry>
     <title>Blender学习：渲染茶壶</title>
