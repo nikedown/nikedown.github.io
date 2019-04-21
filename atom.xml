@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-19T14:51:40.030Z</updated>
+  <updated>2019-04-21T03:39:50.599Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Blender学习：纹理与简单的展UV操作</title>
+    <link href="http://yoursite.com/2019/04/20/Blender%E5%AD%A6%E4%B9%A0%EF%BC%9A%E7%BA%B9%E7%90%86%E4%B8%8E%E7%AE%80%E5%8D%95%E7%9A%84%E5%B1%95UV%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2019/04/20/Blender学习：纹理与简单的展UV操作/</id>
+    <published>2019-04-20T13:12:06.000Z</published>
+    <updated>2019-04-21T03:39:50.599Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="这节主要是学习纹理和简单的展UV操作"><a href="#这节主要是学习纹理和简单的展UV操作" class="headerlink" title="这节主要是学习纹理和简单的展UV操作"></a>这节主要是学习纹理和简单的展UV操作</h2><ul><li>在3D模型中，有两种纹理，一种是2D纹理（加载一个2D图像，然后把它包在模型身上），一种是程序性纹理（在渲染过程中生成并应用到模型身上，更难）<h4 id="展UV操作"><a href="#展UV操作" class="headerlink" title="展UV操作"></a>展UV操作</h4></li><li>新建一个项目，通过G将正方体移到地面上<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a36cgwxmj31hc0smquf.jpg" alt></li><li>将大纲视图改为UV图像编辑器（编辑器中的2D空间称为UV空间）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a36vbpbfj31hc0smaua.jpg" alt></li><li>Tab进入编辑模式，切换到边选择模式，将所有边选择上（每次选择时按Shift可以实现多选）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3733698j31hc0sm4m4.jpg" alt></li><li>点击边选项中的标记缝合边（边的选择关系到后面UV展开的样子）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a37d9ijmj31hc0smh3p.jpg" alt></li><li>按A全选，点击UV选项中的展开<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a39dj2tnj31hc0smh78.jpg" alt></li><li>在UV编辑器的视图中可以用鼠标中键来移动上面的菜单</li><li>Tab退出编辑模式，进入材质面板</li><li>点击“使用节点”（现在有了默认的标准BSDF材质）</li><li>选择着色编辑器<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3a5e4v8j31hc0sm19s.jpg" alt></li><li>在原理化BSDF的参数附近都有一个小圆点（实际上是输入端口，可以通过这个端口输入不同类型的数据，端口颜色代表数据类型，黄色代表颜色数绿据，灰色代表缩放数据，蓝色代表矢量数据，绿色代表材质类型）</li><li>将鼠标光标放在着色编辑器上，按Shift+A后选择纹理中的图像纹理，点击打开就可以打开存储的纹理图片了<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3dk41e4j31hc0smqmr.jpg" alt></li><li>将颜色连接到原理化BSDF的颜色端口上面<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3dzwjv0j31hc0smatw.jpg" alt></li><li>切换到Cycles渲染引擎，Z进行渲染<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3e6veemj31hc0smk8i.jpg" alt></li><li>Shift+A添加一盏灯（可以调节一下灯光强度让效果更加明显）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3edfjyvj31hc0sm4dv.jpg" alt></li><li>打开修改器，添加表面细分<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3ejqyxij31hc0sm4f6.jpg" alt></li><li>将视图调节到4，进入对象菜单，选择“光滑着色”（之后可以通过糙度滑块来调节粗糙度，但不好，不如使用黑白图像去驱动粗糙度）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3er4o1yj31hc0smdwm.jpg" alt></li><li>取消渲染</li><li>选中图中的图像纹理，Shift+D复制，在新的图像纹理打开粗糙度纹理图像<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3f27jxkj31hc0sm1e7.jpg" alt></li><li>将新的纹理图像连接到糙度，之后进行渲染<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3fnifw3j31hc0smaow.jpg" alt></li><li>物体表面的粗糙度已经有了变化，但表面还是平滑的，没有凹凸感（解决方法为高度或者法线）</li><li>添加高度通道，Shift+D复制纹理，打开高度通道图片（由于没有这些图片素材就随便找个图片演示）</li><li>Shift+A打开添加菜单，选择矢量中的凹凸<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3g9b8amj31hc0smaqd.jpg" alt></li><li>将原理化BSDF连接到表面，将凹凸连接到法线输入端口（如图所示，这样表面就变成了凹凸不平的球体）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3hcdz95j31hc0smtre.jpg" alt></li><li>如果觉得凹凸太明显了，可以通过更改凹凸中的距离进行更改<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3hlyp4uj31hc0smnff.jpg" alt></li><li>改完之后的凹凸感就没那么强烈了<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3rxj2r4j31hc0sm1a0.jpg" alt><br><a href="https://www.bilibili.com/video/av36550581/?p=7" target="_blank" rel="noopener">Blender学习：纹理原理与简单的展UV操作</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;这节主要是学习纹理和简单的展UV操作&quot;&gt;&lt;a href=&quot;#这节主要是学习纹理和简单的展UV操作&quot; class=&quot;headerlink&quot; title=&quot;这节主要是学习纹理和简单的展UV操作&quot;&gt;&lt;/a&gt;这节主要是学习纹理和简单的展UV操作&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Blender学习：渲染参数与结果</title>
@@ -48,7 +70,7 @@
     <link href="http://yoursite.com/2019/04/19/Blender%E5%AD%A6%E4%B9%A0%EF%BC%9A%E6%B8%B2%E6%9F%93%E8%8C%B6%E5%A3%B6/"/>
     <id>http://yoursite.com/2019/04/19/Blender学习：渲染茶壶/</id>
     <published>2019-04-19T05:17:08.000Z</published>
-    <updated>2019-04-19T08:32:24.793Z</updated>
+    <updated>2019-04-21T03:41:09.411Z</updated>
     
     <content type="html"><![CDATA[<h2 id="这次我们通过将制作好的茶壶进行渲染来进一步学习"><a href="#这次我们通过将制作好的茶壶进行渲染来进一步学习" class="headerlink" title="这次我们通过将制作好的茶壶进行渲染来进一步学习"></a>这次我们通过将制作好的茶壶进行渲染来进一步学习</h2><h4 id="将壶体表面变光滑"><a href="#将壶体表面变光滑" class="headerlink" title="将壶体表面变光滑"></a>将壶体表面变光滑</h4><p>在渲染前我们要知道哪一个是修改器</p><ul><li>在启用修改器前我们要选中要启用修改器的物体，让其处于激活状态才能对该物体使用修改器</li><li>下图就是修改器的位置<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2805w2bixj31hc0smnnk.jpg" alt></li><li>选中修改器中的表面细分（之后壶体表面就会变圆润，如果出现穿模则需要修改模型）</li><li>更改平滑度可以使表面更光滑（在修改器中叫视图或view）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g280641oqoj31hc0smnmq.jpg" alt><h4 id="渲染引擎"><a href="#渲染引擎" class="headerlink" title="渲染引擎"></a>渲染引擎</h4></li><li>渲染引擎为图中位置<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2806e9kt6j31hc0smnn3.jpg" alt></li><li>渲染引擎菜单中可以选择Eevee、Workbench和Cycles三种引擎</li><li>Cycles是一款暴力渲染引擎（也称无偏差式渲染），会追踪每束来自摄像机的光线，操作简单，只需给摄像机添加光线即可，但渲染速度很慢（如果将灯光藏在角落或一些偏僻的地方，甚至需要花好几天才能完成渲染）</li><li>Eevee可以在一秒之内渲染出多张图片，但不会追踪光线而是预估光线，因此不那么真实</li><li>选择Cycles进行渲染，特性选择支持特性，在设备中选择GPU运算（如果选择不了的话就打开用户设置中CUDA选择自己的独显）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2806o1qfpj31hc0sm4il.jpg" alt></li><li>将光标放在视图中，按下Z+小键盘8（或按Z选择弹框中的渲染）就渲染好了<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g28074ioguj31hc0smk9a.jpg" alt></li><li>按Z回到物体模式，将大纲视图改为另一个3D视图，在新视图中选择渲染<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2807dgt2lj31hc0sm1i1.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2807n49naj31hc0sm4nt.jpg" alt></li><li>原视图按F3搜索将光标吸附到中心（我只找到将光标吸附到激活点的选项，可能是版本的问题，这一步是保证光标在物体中心）</li><li>Shift+A选择网格中的平面，并用S将其放大<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2808c92y7j31hc0smkhn.jpg" alt></li><li>Shift+A选择灯光中的spot,G+Z让灯光沿着Z轴移动</li><li>小键盘3进入侧视图，用G和R将灯光移到如图位置<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2808ld48sj31hc0sm7vq.jpg" alt></li><li>小键盘7进入顶视图，将灯光移到如图位置<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2808qk5rfj31hc0smkgz.jpg" alt></li><li>进入灯光属性面板调整灯光各种属性<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2808x7vtoj31hc0smhbf.jpg" alt></li><li>将灯光强度改为5000，将灯光颜色改为暖色调<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g28099q7nej31hc0sm1kx.jpg" alt></li><li>将混合参数调到1（会发现灯光在中心位置会更加明亮，边缘会变得幽暗起来）</li><li>为了将阴影变柔和，将灯光的尺寸调大（改为1米，灯光越大，阴影越柔和）</li><li>小键盘3进入侧视图，Shift+D复制一盏灯光并移到如图位置<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2809hao70j31hc0smb29.jpg" alt></li><li>小键盘7进入顶视图再自己调一下位置<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2809odep8j31hc0sm7wh.jpg" alt></li><li>将灯光强度改为1000<h4 id="添加材质"><a href="#添加材质" class="headerlink" title="添加材质"></a>添加材质</h4>由于没有地板和茶壶都没添加材质，因此使用的都是默认的白色漫射材质</li><li>选中茶壶让其进入激活状态，打开材质面板，新建一个材质<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g280aobgyoj31hc0sm4qp.jpg" alt></li><li>进入表面选项，可以看到不同的着色器（默认为原理化BSDF，为通用着色器，基本可以用来表示生活中看到的一切东西），大部分参数都采用默认的<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g280a83jslj31hc0sm1kx.jpg" alt></li><li>自己根据喜好调整基础色</li><li>次表面选项会让一些光线穿过表面（适合制作塑料、蜡质和皮肤之类的材质）</li><li>更改金属度参数为1（这样会让物体看起来就是金属）  </li><li>粗糙度设为0.3（越大就越不像金属）  </li><li>调节高光参数会更改反射效果（只对非金属材质起作用，金属度调为1就不在起作用）</li><li>透射参数会把材质变为玻璃（这样在附近放置一个物体会透过茶壶看到物体）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g280b10yt5j31hc0sm7wh.jpg" alt></li><li>选中地板，添加一个新材质，把颜色改为蓝色</li><li>将地板参数大致设置成如下样子（这样就能将茶壶反射出来了）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g280bc5jerj31hc0sm7wh.jpg" alt></li><li>进行最终渲染，将摄像机放在合适的位置</li><li>小键盘0进入相机视角，N进入另一个信息面板勾选锁定相机到视图方位（现在就可以在视图中旋转，摄像机也就跟着视图一起了），调好想要的位置<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g280bhxxokj31hc0smx3k.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g280bqhqfdj31hc0sme75.jpg" alt></li><li>调好后再次N键打开信息面板取消勾选</li><li>进入渲染菜单，点击“渲染图像”（快捷键为F12）</li><li>点击后就进入渲染进程，等待渲染完成就可以看到成果了<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g280c0i0mhj30mz0j5k0f.jpg" alt></li><li>点击图像可以将图片保存<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g280c9ip7hj30mz0j5dob.jpg" alt></li><li>但是图片并不完美，放大看可以看到阴影区域还有很多噪点<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g280cgir6uj30rc0igq9x.jpg" alt></li><li>以上的设置都可以更改，可以根据自己喜好进行更改，例如将茶壶的细分参数调到6后茶壶就变得十分光滑了（但同时渲染时间也变长了，并且细分参数要根据自己的电脑配置调，我调到6时风扇已经呼呼的转起来了）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g280dms9ukj31hc0u01ky.jpg" alt><br>以上步骤都是根据视频完成，以下是视频的链接<br><a href="https://www.bilibili.com/video/av36550581/?p=5" target="_blank" rel="noopener">Blender学习：渲染概述</a></li></ul>]]></content>
     
