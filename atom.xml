@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-21T03:39:50.599Z</updated>
+  <updated>2019-04-21T03:44:45.942Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/04/20/Blender%E5%AD%A6%E4%B9%A0%EF%BC%9A%E7%BA%B9%E7%90%86%E4%B8%8E%E7%AE%80%E5%8D%95%E7%9A%84%E5%B1%95UV%E6%93%8D%E4%BD%9C/"/>
     <id>http://yoursite.com/2019/04/20/Blender学习：纹理与简单的展UV操作/</id>
     <published>2019-04-20T13:12:06.000Z</published>
-    <updated>2019-04-21T03:39:50.599Z</updated>
+    <updated>2019-04-21T03:44:45.942Z</updated>
     
     <content type="html"><![CDATA[<h2 id="这节主要是学习纹理和简单的展UV操作"><a href="#这节主要是学习纹理和简单的展UV操作" class="headerlink" title="这节主要是学习纹理和简单的展UV操作"></a>这节主要是学习纹理和简单的展UV操作</h2><ul><li>在3D模型中，有两种纹理，一种是2D纹理（加载一个2D图像，然后把它包在模型身上），一种是程序性纹理（在渲染过程中生成并应用到模型身上，更难）<h4 id="展UV操作"><a href="#展UV操作" class="headerlink" title="展UV操作"></a>展UV操作</h4></li><li>新建一个项目，通过G将正方体移到地面上<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a36cgwxmj31hc0smquf.jpg" alt></li><li>将大纲视图改为UV图像编辑器（编辑器中的2D空间称为UV空间）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a36vbpbfj31hc0smaua.jpg" alt></li><li>Tab进入编辑模式，切换到边选择模式，将所有边选择上（每次选择时按Shift可以实现多选）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3733698j31hc0sm4m4.jpg" alt></li><li>点击边选项中的标记缝合边（边的选择关系到后面UV展开的样子）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a37d9ijmj31hc0smh3p.jpg" alt></li><li>按A全选，点击UV选项中的展开<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a39dj2tnj31hc0smh78.jpg" alt></li><li>在UV编辑器的视图中可以用鼠标中键来移动上面的菜单</li><li>Tab退出编辑模式，进入材质面板</li><li>点击“使用节点”（现在有了默认的标准BSDF材质）</li><li>选择着色编辑器<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3a5e4v8j31hc0sm19s.jpg" alt></li><li>在原理化BSDF的参数附近都有一个小圆点（实际上是输入端口，可以通过这个端口输入不同类型的数据，端口颜色代表数据类型，黄色代表颜色数绿据，灰色代表缩放数据，蓝色代表矢量数据，绿色代表材质类型）</li><li>将鼠标光标放在着色编辑器上，按Shift+A后选择纹理中的图像纹理，点击打开就可以打开存储的纹理图片了<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3dk41e4j31hc0smqmr.jpg" alt></li><li>将颜色连接到原理化BSDF的颜色端口上面<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3dzwjv0j31hc0smatw.jpg" alt></li><li>切换到Cycles渲染引擎，Z进行渲染<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3e6veemj31hc0smk8i.jpg" alt></li><li>Shift+A添加一盏灯（可以调节一下灯光强度让效果更加明显）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3edfjyvj31hc0sm4dv.jpg" alt></li><li>打开修改器，添加表面细分<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3ejqyxij31hc0sm4f6.jpg" alt></li><li>将视图调节到4，进入对象菜单，选择“光滑着色”（之后可以通过糙度滑块来调节粗糙度，但不好，不如使用黑白图像去驱动粗糙度）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3er4o1yj31hc0smdwm.jpg" alt></li><li>取消渲染</li><li>选中图中的图像纹理，Shift+D复制，在新的图像纹理打开粗糙度纹理图像<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3f27jxkj31hc0sm1e7.jpg" alt></li><li>将新的纹理图像连接到糙度，之后进行渲染<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3fnifw3j31hc0smaow.jpg" alt></li><li>物体表面的粗糙度已经有了变化，但表面还是平滑的，没有凹凸感（解决方法为高度或者法线）</li><li>添加高度通道，Shift+D复制纹理，打开高度通道图片（由于没有这些图片素材就随便找个图片演示）</li><li>Shift+A打开添加菜单，选择矢量中的凹凸<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3g9b8amj31hc0smaqd.jpg" alt></li><li>将原理化BSDF连接到表面，将凹凸连接到法线输入端口（如图所示，这样表面就变成了凹凸不平的球体）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3hcdz95j31hc0smtre.jpg" alt></li><li>如果觉得凹凸太明显了，可以通过更改凹凸中的距离进行更改<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3hlyp4uj31hc0smnff.jpg" alt></li><li>改完之后的凹凸感就没那么强烈了<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2a3rxj2r4j31hc0sm1a0.jpg" alt><br><a href="https://www.bilibili.com/video/av36550581/?p=7" target="_blank" rel="noopener">Blender学习：纹理原理与简单的展UV操作</a></li></ul>]]></content>
     
@@ -35,6 +35,12 @@
     
     </summary>
     
+      <category term="Blender" scheme="http://yoursite.com/categories/Blender/"/>
+    
+    
+      <category term="Blender学习" scheme="http://yoursite.com/tags/Blender%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="纹理与简单的展UV操作" scheme="http://yoursite.com/tags/%E7%BA%B9%E7%90%86%E4%B8%8E%E7%AE%80%E5%8D%95%E7%9A%84%E5%B1%95UV%E6%93%8D%E4%BD%9C/"/>
     
   </entry>
   
