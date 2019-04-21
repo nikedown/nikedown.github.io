@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>nikedown&#39;s Blog</title>
+    <title>Blender学习：给茶壶上纹理 · nikedown&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -218,12 +218,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">Nikedown&#39;s Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Blender学习：给茶壶上纹理</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">Nikedown's Blog</a>
 </header>
@@ -235,24 +246,76 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(https://source.unsplash.com/random/2560x863)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Blender学习：给茶壶上纹理
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Blender学习">Blender学习</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="给茶壶上纹理">给茶壶上纹理</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">791</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/04/21</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -353,41 +416,95 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/20/Blender学习：纹理与简单的展UV操作/">
-            
-                <span>Blender学习：纹理与简单的展UV操作</span>
-        </a>
-        <div class="abstract-content">
-            
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Blender学习">Blender学习</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="纹理与简单的展UV操作">纹理与简单的展UV操作</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h3 id="本节将用到之前制作的茶壶，给茶壶上纹理"><a href="#本节将用到之前制作的茶壶，给茶壶上纹理" class="headerlink" title="本节将用到之前制作的茶壶，给茶壶上纹理"></a>本节将用到之前制作的茶壶，给茶壶上纹理</h3><h4 id="展UV操作前的准备操作"><a href="#展UV操作前的准备操作" class="headerlink" title="展UV操作前的准备操作"></a>展UV操作前的准备操作</h4><ul>
+<li>打开之前制作的茶壶<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2acxu6ubyj31hc0sm4na.jpg" alt></li>
+<li>将猴子先删除了</li>
+<li>将除了茶壶的其他东西都隐藏掉（这样是为了从地下渲染茶壶不会被挡住），按住Shift选择其他所有物体（注意还有空白物体也要选中），按H将其全部隐藏（取消隐藏为Alt+H）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2acy46069j31hc0sm7st.jpg" alt></li>
+<li>将茶壶的细分中的视图调为0得到一个低面茶壶<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2acy9qqkkj31hc0smtxi.jpg" alt></li>
+<li>将着色改为平直着色<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2acyeu0kzj31hc0smx1u.jpg" alt><h4 id="对茶壶进行展UV操作"><a href="#对茶壶进行展UV操作" class="headerlink" title="对茶壶进行展UV操作"></a>对茶壶进行展UV操作</h4></li>
+<li>Tab进入编辑模式，选中边模式</li>
+<li>首先对壶盖进行展UV操作</li>
+<li>Alt+左键选择循环边<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2acymcbr7j31hc0sm1hy.jpg" alt></li>
+<li>Ctrl+E打开边菜单，选择标记缝合边（选择图中几条进行标记）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2acyw7k63j31hc0smx2f.jpg" alt></li>
+<li>选中壶盖任意边，Ctrl+L选中与该边相连接的所有边，Shift+H隐藏所有未选择的物体</li>
+<li>选中图中的循环边，Ctrl+E标记缝合边<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2acz4adtwj31hc0smkdc.jpg" alt></li>
+<li>小键盘7进入顶视图</li>
+<li>将图中的四条边也进行标记缝合边操作<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2aczk97myj31hc0smtw6.jpg" alt></li>
+<li>将茶壶的其他部分取消隐藏（Alt+H）</li>
+<li>隐藏壶盖（选中边后Ctrl+L，H隐藏）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad0072s0j31hc0smx31.jpg" alt></li>
+<li>按下图顺序标记缝合边<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad0jhn1ej31hc0smx6d.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad0qe52zj31hc0sm4nx.jpg" alt><br>注意：这两处要取消两条边<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad0xv0kfj31hc0smhbm.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad13augij31hc0sm7ti.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad18bkmzj31hc0smx5k.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad1eklcxj31hc0sm1jf.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad1k8tmsj31hc0smkio.jpg" alt></li>
+<li>Alt+H将盖子取消隐藏</li>
+<li>按A选择所有物体，U打开展UV菜单，选择展开，调出UV编辑器<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad1sv0p4j31hc0smtuv.jpg" alt><h4 id="添加纹理"><a href="#添加纹理" class="headerlink" title="添加纹理"></a>添加纹理</h4></li>
+<li>将视图改为着色编辑器视图</li>
+<li>Shift+A选择纹理中的图像纹理<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad23ucmvj31hc0smh81.jpg" alt></li>
+<li>打开大理石纹理贴图（确保你有大理石纹理贴图）</li>
+<li>把图像纹理的边连接到原理化BSDF着色器的基本颜色端口<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad28r9zhj31hc0sme2a.jpg" alt></li>
+<li>Alt+H将场景中的其他物体弄回来（注意：先退出编辑模式）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad2ln5njj31hc0smqp6.jpg" alt></li>
+<li>Shift+Z渲染场景<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad2wnac6j31hc0smkjl.jpg" alt></li>
+<li>Z进入实体模式，Tab进入编辑模式，按住Alt选中图中的循环边，清除缝合边<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad3499q5j31hc0smnj8.jpg" alt></li>
+<li>在图中位置再添加新的缝合边<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad39nn7fj31hc0smavb.jpg" alt></li>
+<li>A全选，U打开UV菜单，然后选择展开，打开UV编辑器视图查看一下<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad3f6417j31hc0sm4qp.jpg" alt></li>
+<li>Tab退出编辑模式，然后再次渲染（这些步骤是为了让缝合边在壶嘴下面，隐藏掉缺陷）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad3mbs4pj31hc0smqv5.jpg" alt></li>
+<li>进入着色器视图，Shift+D复制该纹理，然后Shift+D再复制一次<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad3uvfykj31hc0smb29.jpg" alt></li>
+<li>添加法线纹理（该图片存的不是颜色数据，而是包含了法线矢量数据的图像，没有自己制作法线纹理，因此都用同一张图片来做示范），将如图项改为非颜色数据<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad40jvcgj31hc0smqo1.jpg" alt></li>
+<li>Shift+A选择矢量中的法线贴图，如图连接<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad44krf8j31hc0sm4ja.jpg" alt></li>
+<li>打开粗糙度文件，切换到无颜色数据，颜色连接到原理化BSDF着色器的粗糙通道<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad4992oaj31hc0sm1dl.jpg" alt></li>
+<li>之后进行最终渲染（这是去网上找的纹理套图后渲染出来的效果，与之前几张图片的纹理贴图不一样，给茶壶上纹理后的渲染速度会变得非常慢）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad5b4pftj31hc0u0u0x.jpg" alt><br>下面是最终渲染图用到的纹理图<br><a href="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad7gcts7j30sg0sg45v.jpg" target="_blank" rel="noopener">图片1</a><br><a href="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad8nk2o9j30sg0sg3zp.jpg" target="_blank" rel="noopener">图片2</a><br><a href="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad9r9816j30sg0sgqaj.jpg" target="_blank" rel="noopener">图片3</a><br><a href="https://www.bilibili.com/video/av36550581/?p=8" target="_blank" rel="noopener">Blender学习：给茶壶上纹理</a></li>
+</ul>
+
     </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://yoursite.com">nikedown</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/04/21/Blender学习：给茶壶上纹理/">April 21st 2019, 12:59:40 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/04/21/Blender学习：给茶壶上纹理/">April 21st 2019, 5:10:37 pm</a>          
+        </p></div>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/04/20/Blender学习：纹理与简单的展UV操作/" title="Blender学习：纹理与简单的展UV操作">
+                    <div class="prevTitle">Blender学习：纹理与简单的展UV操作</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80Mzc3My8yMDMxMg==">
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -465,6 +582,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#本节将用到之前制作的茶壶，给茶壶上纹理"><span class="toc-number">1.</span> <span class="toc-text">本节将用到之前制作的茶壶，给茶壶上纹理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#展UV操作前的准备操作"><span class="toc-number">1.1.</span> <span class="toc-text">展UV操作前的准备操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对茶壶进行展UV操作"><span class="toc-number">1.2.</span> <span class="toc-text">对茶壶进行展UV操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#添加纹理"><span class="toc-number">1.3.</span> <span class="toc-text">添加纹理</span></a></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -803,6 +938,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

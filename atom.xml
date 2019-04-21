@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-21T03:44:45.942Z</updated>
+  <updated>2019-04-21T09:10:37.365Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Blender学习：给茶壶上纹理</title>
+    <link href="http://yoursite.com/2019/04/21/Blender%E5%AD%A6%E4%B9%A0%EF%BC%9A%E7%BB%99%E8%8C%B6%E5%A3%B6%E4%B8%8A%E7%BA%B9%E7%90%86/"/>
+    <id>http://yoursite.com/2019/04/21/Blender学习：给茶壶上纹理/</id>
+    <published>2019-04-21T04:59:40.000Z</published>
+    <updated>2019-04-21T09:10:37.365Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="本节将用到之前制作的茶壶，给茶壶上纹理"><a href="#本节将用到之前制作的茶壶，给茶壶上纹理" class="headerlink" title="本节将用到之前制作的茶壶，给茶壶上纹理"></a>本节将用到之前制作的茶壶，给茶壶上纹理</h3><h4 id="展UV操作前的准备操作"><a href="#展UV操作前的准备操作" class="headerlink" title="展UV操作前的准备操作"></a>展UV操作前的准备操作</h4><ul><li>打开之前制作的茶壶<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2acxu6ubyj31hc0sm4na.jpg" alt></li><li>将猴子先删除了</li><li>将除了茶壶的其他东西都隐藏掉（这样是为了从地下渲染茶壶不会被挡住），按住Shift选择其他所有物体（注意还有空白物体也要选中），按H将其全部隐藏（取消隐藏为Alt+H）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2acy46069j31hc0sm7st.jpg" alt></li><li>将茶壶的细分中的视图调为0得到一个低面茶壶<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2acy9qqkkj31hc0smtxi.jpg" alt></li><li>将着色改为平直着色<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2acyeu0kzj31hc0smx1u.jpg" alt><h4 id="对茶壶进行展UV操作"><a href="#对茶壶进行展UV操作" class="headerlink" title="对茶壶进行展UV操作"></a>对茶壶进行展UV操作</h4></li><li>Tab进入编辑模式，选中边模式</li><li>首先对壶盖进行展UV操作</li><li>Alt+左键选择循环边<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2acymcbr7j31hc0sm1hy.jpg" alt></li><li>Ctrl+E打开边菜单，选择标记缝合边（选择图中几条进行标记）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2acyw7k63j31hc0smx2f.jpg" alt></li><li>选中壶盖任意边，Ctrl+L选中与该边相连接的所有边，Shift+H隐藏所有未选择的物体</li><li>选中图中的循环边，Ctrl+E标记缝合边<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2acz4adtwj31hc0smkdc.jpg" alt></li><li>小键盘7进入顶视图</li><li>将图中的四条边也进行标记缝合边操作<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2aczk97myj31hc0smtw6.jpg" alt></li><li>将茶壶的其他部分取消隐藏（Alt+H）</li><li>隐藏壶盖（选中边后Ctrl+L，H隐藏）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad0072s0j31hc0smx31.jpg" alt></li><li>按下图顺序标记缝合边<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad0jhn1ej31hc0smx6d.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad0qe52zj31hc0sm4nx.jpg" alt><br>注意：这两处要取消两条边<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad0xv0kfj31hc0smhbm.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad13augij31hc0sm7ti.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad18bkmzj31hc0smx5k.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad1eklcxj31hc0sm1jf.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad1k8tmsj31hc0smkio.jpg" alt></li><li>Alt+H将盖子取消隐藏</li><li>按A选择所有物体，U打开展UV菜单，选择展开，调出UV编辑器<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad1sv0p4j31hc0smtuv.jpg" alt><h4 id="添加纹理"><a href="#添加纹理" class="headerlink" title="添加纹理"></a>添加纹理</h4></li><li>将视图改为着色编辑器视图</li><li>Shift+A选择纹理中的图像纹理<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad23ucmvj31hc0smh81.jpg" alt></li><li>打开大理石纹理贴图（确保你有大理石纹理贴图）</li><li>把图像纹理的边连接到原理化BSDF着色器的基本颜色端口<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad28r9zhj31hc0sme2a.jpg" alt></li><li>Alt+H将场景中的其他物体弄回来（注意：先退出编辑模式）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad2ln5njj31hc0smqp6.jpg" alt></li><li>Shift+Z渲染场景<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad2wnac6j31hc0smkjl.jpg" alt></li><li>Z进入实体模式，Tab进入编辑模式，按住Alt选中图中的循环边，清除缝合边<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad3499q5j31hc0smnj8.jpg" alt></li><li>在图中位置再添加新的缝合边<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad39nn7fj31hc0smavb.jpg" alt></li><li>A全选，U打开UV菜单，然后选择展开，打开UV编辑器视图查看一下<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad3f6417j31hc0sm4qp.jpg" alt></li><li>Tab退出编辑模式，然后再次渲染（这些步骤是为了让缝合边在壶嘴下面，隐藏掉缺陷）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad3mbs4pj31hc0smqv5.jpg" alt></li><li>进入着色器视图，Shift+D复制该纹理，然后Shift+D再复制一次<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad3uvfykj31hc0smb29.jpg" alt></li><li>添加法线纹理（该图片存的不是颜色数据，而是包含了法线矢量数据的图像，没有自己制作法线纹理，因此都用同一张图片来做示范），将如图项改为非颜色数据<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad40jvcgj31hc0smqo1.jpg" alt></li><li>Shift+A选择矢量中的法线贴图，如图连接<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad44krf8j31hc0sm4ja.jpg" alt></li><li>打开粗糙度文件，切换到无颜色数据，颜色连接到原理化BSDF着色器的粗糙通道<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad4992oaj31hc0sm1dl.jpg" alt></li><li>之后进行最终渲染（这是去网上找的纹理套图后渲染出来的效果，与之前几张图片的纹理贴图不一样，给茶壶上纹理后的渲染速度会变得非常慢）<br><img src="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad5b4pftj31hc0u0u0x.jpg" alt><br>下面是最终渲染图用到的纹理图<br><a href="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad7gcts7j30sg0sg45v.jpg" target="_blank" rel="noopener">图片1</a><br><a href="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad8nk2o9j30sg0sg3zp.jpg" target="_blank" rel="noopener">图片2</a><br><a href="http://ww1.sinaimg.cn/large/006DbEZUgy1g2ad9r9816j30sg0sgqaj.jpg" target="_blank" rel="noopener">图片3</a><br><a href="https://www.bilibili.com/video/av36550581/?p=8" target="_blank" rel="noopener">Blender学习：给茶壶上纹理</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;本节将用到之前制作的茶壶，给茶壶上纹理&quot;&gt;&lt;a href=&quot;#本节将用到之前制作的茶壶，给茶壶上纹理&quot; class=&quot;headerlink&quot; title=&quot;本节将用到之前制作的茶壶，给茶壶上纹理&quot;&gt;&lt;/a&gt;本节将用到之前制作的茶壶，给茶壶上纹理&lt;/h3&gt;&lt;h4 i
+      
+    
+    </summary>
+    
+      <category term="Blender" scheme="http://yoursite.com/categories/Blender/"/>
+    
+    
+      <category term="Blender学习" scheme="http://yoursite.com/tags/Blender%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="给茶壶上纹理" scheme="http://yoursite.com/tags/%E7%BB%99%E8%8C%B6%E5%A3%B6%E4%B8%8A%E7%BA%B9%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Blender学习：纹理与简单的展UV操作</title>
@@ -232,9 +259,9 @@
     <link href="http://yoursite.com/2019/04/02/Blender%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/"/>
     <id>http://yoursite.com/2019/04/02/Blender学习入门/</id>
     <published>2019-04-02T11:13:07.000Z</published>
-    <updated>2019-04-19T08:29:17.791Z</updated>
+    <updated>2019-04-21T05:08:41.920Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Blender界面"><a href="#Blender界面" class="headerlink" title="Blender界面"></a>Blender界面</h3><p>想要了解学习Blender的话，首先要先了解Blender的界面以及一些基本的操作，下面是带有中文字幕关于Blender 2.80界面的视频教程。<br><a href="https://www.bilibili.com/video/av36550581/?p=1" target="_blank" rel="noopener">Blender入门教程之界面介绍</a></p><h3 id="视图基本操作"><a href="#视图基本操作" class="headerlink" title="视图基本操作"></a>视图基本操作</h3><ul><li>最大化视图：鼠标放在视图窗口，按住Ctrl+空格</li><li>旋转摄像机镜头：按住鼠标中键</li><li>移动摄像机镜头：按住Shift+鼠标中键</li><li>缩放视图：按住Ctrl+鼠标中键+鼠标滚轮</li><li>手动控制虚拟对象：Shift+B 然后拖动出一个区域</li><li>移动对象：鼠标左键选中对象，按下G键就可以移动目标了，再按鼠标右键对象回到原点</li><li>正视图：数字键盘1；右视图：数字键盘3；顶视图：数字键盘7；每个视图对应的反视图都是Ctrl+对应正视图的快捷键（注意：数字键盘是右侧的小键盘，字母上的数字键对应的是其他的功能）</li><li>切换透视视图和正交视图：数字键盘5</li><li>搜索框：F3</li><li>渲染图片:F12<br>视频入口：<a href="https://www.bilibili.com/video/av36550581/?p=2" target="_blank" rel="noopener">Blender视图基本操作</a>  <h3 id="物体操作"><a href="#物体操作" class="headerlink" title="物体操作"></a>物体操作</h3></li><li>物体选中：鼠标左键</li><li>多选物体：按住Shift+鼠标左键（物体被选中后处于被激活状态，物体的属性也会被激活）</li><li>选择框选择物体：B+鼠标拖出一片区域（选中的物体不属于激活状态）</li><li>取消选择框选中的物体：B+鼠标中键拖出一片区域（同样不改变物体的激活状态）</li><li>全选物体：A，取消全选物体：Alt+A</li><li>物体沿轴向移动：先按G激活移动命令，分别按X，Y，Z沿X，Y，Z轴运动</li><li>物体旋转：选中物体后按R键，指定轴向旋转也是分别按X，Y，Z</li><li>物体缩放：选中物体后按S键，指定轴向缩放也是分别按X，Y，Z</li><li>删除物体：选中后按X键</li><li>添加物体：Shift+A</li><li>复制物体：选中物体后按Shift+D</li><li>例：物体向上移动1m：选中物体G+Z+1</li><li>选中目标的某个部位：选中该部位一个顶点，Ctrl+L</li></ul><h3 id="Blender编辑模式"><a href="#Blender编辑模式" class="headerlink" title="Blender编辑模式"></a>Blender编辑模式</h3><ul><li>进入/退出编辑模式：Tab</li><li>添加环切线：Ctrl+R</li><li>回到上一步：Ctrl+Z</li><li>插入内插面：选中一个面后按I</li><li>挤压命令：E</li><li>线条模式：Z+4</li><li>渲染模式：Z+8</li></ul>]]></content>
+    <content type="html"><![CDATA[<h3 id="Blender界面"><a href="#Blender界面" class="headerlink" title="Blender界面"></a>Blender界面</h3><p>想要了解学习Blender的话，首先要先了解Blender的界面以及一些基本的操作，下面是带有中文字幕关于Blender 2.80界面的视频教程。<br><a href="https://www.bilibili.com/video/av36550581/?p=1" target="_blank" rel="noopener">Blender入门教程之界面介绍</a></p><h3 id="视图基本操作"><a href="#视图基本操作" class="headerlink" title="视图基本操作"></a>视图基本操作</h3><ul><li>最大化视图：鼠标放在视图窗口，按住Ctrl+空格</li><li>旋转摄像机镜头：按住鼠标中键</li><li>移动摄像机镜头：按住Shift+鼠标中键</li><li>缩放视图：按住Ctrl+鼠标中键+鼠标滚轮</li><li>手动控制虚拟对象：Shift+B 然后拖动出一个区域</li><li>移动对象：鼠标左键选中对象，按下G键就可以移动目标了，再按鼠标右键对象回到原点</li><li>正视图：数字键盘1；右视图：数字键盘3；顶视图：数字键盘7；每个视图对应的反视图都是Ctrl+对应正视图的快捷键（注意：数字键盘是右侧的小键盘，字母上的数字键对应的是其他的功能）</li><li>切换透视视图和正交视图：数字键盘5</li><li>搜索框：F3</li><li>渲染图片:F12<br>视频入口：<a href="https://www.bilibili.com/video/av36550581/?p=2" target="_blank" rel="noopener">Blender视图基本操作</a>  <h3 id="物体操作"><a href="#物体操作" class="headerlink" title="物体操作"></a>物体操作</h3></li><li>物体选中：鼠标左键</li><li>多选物体：按住Shift+鼠标左键（物体被选中后处于被激活状态，物体的属性也会被激活）</li><li>选择框选择物体：B+鼠标拖出一片区域（选中的物体不属于激活状态）</li><li>取消选择框选中的物体：B+鼠标中键拖出一片区域（同样不改变物体的激活状态）</li><li>全选物体：A，取消全选物体：Alt+A</li><li>物体沿轴向移动：先按G激活移动命令，分别按X，Y，Z沿X，Y，Z轴运动</li><li>物体旋转：选中物体后按R键，指定轴向旋转也是分别按X，Y，Z</li><li>物体缩放：选中物体后按S键，指定轴向缩放也是分别按X，Y，Z</li><li>删除物体：选中后按X键</li><li>添加物体：Shift+A</li><li>复制物体：选中物体后按Shift+D</li><li>例：物体向上移动1m：选中物体G+Z+1</li><li>选中目标的某个部位：选中该部位一个顶点，Ctrl+L</li><li>隐藏物体：选中物体后按H键</li><li>取消隐藏：Alt+H键</li></ul><h3 id="Blender编辑模式"><a href="#Blender编辑模式" class="headerlink" title="Blender编辑模式"></a>Blender编辑模式</h3><ul><li>进入/退出编辑模式：Tab</li><li>添加环切线：Ctrl+R</li><li>回到上一步：Ctrl+Z</li><li>插入内插面：选中一个面后按I</li><li>挤压命令：E</li><li>线条模式：Z+4</li><li>渲染模式：Z+8</li></ul>]]></content>
     
     <summary type="html">
     
